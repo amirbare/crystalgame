@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW3 Random Number</title>
+
+
+    <style>
+    
+    img
+    {
+
+            width: 100px;
+    }
+    </style>
+</head>
+<body>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <h1 id="display"></h1>
+        <img id="crystal1" src="a.png"></img>
+        <img id="crystal2" src="b.png"></img>
+        <img id="crystal3" src="c.png"></img>
+        <img id="crystal4" src="d.png"></img>
+
+
+
+
+        <script>
+
+                var userRandomNum = 0;
+
+                var crystalOneRandomNum = 0;
+                var crystalTwoRandomNum = 0;
+                var crystalThreeRandomNum = 0;
+                var crystalFourRandomNum = 0;
+
+                var compRandomNum = Math.floor(Math.random() * 129);
+
+                $(document).ready(function() {
+                $("#display").append(compRandomNum);
+
+
+                    
+                $("#crystal1").on("click", function () {
+
+                        if(crystalOneRandomNum == 0 )
+                        {
+                        crystalOneRandomNum = Math.floor(Math.random() * 12);
+                        }
+
+                        userRandomNum = userRandomNum+crystalOneRandomNum;
+                        alert("1:"+crystalOneRandomNum);
+
+                        alert("user random number:"+userRandomNum);
+
+                        if(compRandomNum == userRandomNum)
+                        {
+
+                                alert("you win");
+                                location.reload();
+
+                        }
+                
+                        if(userRandomNum > compRandomNum)
+                        {
+
+                                alert("you lose");
+                                location.reload();
+
+                        }
+
+                });
+                $("#crystal2").on("click", function () {
+
+                        if(crystalTwoRandomNum == 0 )
+                        {
+                        crystalTwoRandomNum = Math.floor(Math.random() * 12);
+                        }
+                        userRandomNum = userRandomNum+crystalTwoRandomNum;
+                       
+                        alert("1:" +crystalOneRandomNum);
+
+                        alert("2:"+crystalTwoRandomNum);
+
+                        alert("user random number:"+userRandomNum);
+
+
+
+                        if(compRandomNum == userRandomNum)
+                        {
+
+                                alert("you win");
+                                location.reload();
+
+                        }
+                
+                        if(userRandomNum > compRandomNum)
+                        {
+
+                                alert("you lose");
+                                location.reload();
+
+                        }
+                });
+
+                $("#crystal3").on("click", function () {
+
+
+                        if(crystalThreeRandomNum == 0 )
+                        {
+                        crystalThreeRandomNum = Math.floor(Math.random() * 12);
+                        }
+                        userRandomNum = userRandomNum+crystalThreeRandomNum;
+                       
+                        alert("1:" +crystalOneRandomNum);
+
+                        alert("2:"+crystalTwoRandomNum);
+                        alert("3:"+crystalThreeRandomNum);
+
+
+                        alert("user random number:"+userRandomNum);
+
+
+
+                        if(compRandomNum == userRandomNum)
+                        {
+
+                                alert("you win");
+                                location.reload();
+
+                        }
+                
+                        if(userRandomNum > compRandomNum)
+                        {
+
+                                alert("you lose");
+                                location.reload();
+
+                        }
+                });
+                $("#crystal4").on("click", function () {
+
+                        if(crystalFourRandomNum == 0 )
+                        {
+                                crystalFourRandomNum = Math.floor(Math.random() * 12);
+                        }
+                        userRandomNum = userRandomNum+crystalFourRandomNum;
+                       
+                        alert("1:" +crystalOneRandomNum);
+
+                        alert("2:"+crystalTwoRandomNum);
+                        alert("3:"+crystalThreeRandomNum);
+                        alert("4:"+crystalFourRandomNum);
+
+
+
+                        alert("user random number:"+userRandomNum);
+
+                        if(compRandomNum == userRandomNum)
+                        {
+
+                                alert("you win");
+                                location.reload();
+
+                        }
+                
+                        if(userRandomNum > compRandomNum)
+                        {
+
+                                alert("you lose");
+                                location.reload();
+
+                        }
+                });
+
+
+              
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        });
+
+
+
+
+        </script>
+
+
+    
+</body>
+</html>
