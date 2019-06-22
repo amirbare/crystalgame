@@ -34,6 +34,8 @@
 
 
 
+
+
         <script>
 
                 var userRandomNum = 0;
@@ -62,23 +64,24 @@
                                 
 
 
-                                $("#userrand").append("<div>" + "user random number " + userRandomNum+ "</div>");
 
-                                $("#display1").append("<div>" + "Crystal#One " + crystalOneRandomNum+ "</div>");
+                        
+                                $("#display1").html("<div>" + "Crystal#One " + crystalOneRandomNum+ "</div>");
 
-                                
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
+
 
 
                                 if (compRandomNum == userRandomNum) {
 
-                                        alert("you win");
+                                        alert(userRandomNum +" you win");
                                         location.reload();
 
                                 }
 
                                 if (userRandomNum > compRandomNum) {
 
-                                        alert("you lose");
+                                        alert(userRandomNum +" you lose");
                                         location.reload();
 
                                 }
@@ -90,8 +93,8 @@
                                         crystalTwoRandomNum = Math.floor(Math.random() * 12);
                                 }
                                 userRandomNum = userRandomNum + crystalTwoRandomNum;
-                                $("#display2").append("<div>" + "Crystal#Two " + crystalTwoRandomNum+ "</div>");
-                                $("#userrand").append("<div>" + "user random number " + userRandomNum+ "</div>");
+                                $("#display2").html("<div>" + "Crystal#Two " + crystalTwoRandomNum+ "</div>");
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
 
 
 
@@ -100,14 +103,14 @@
 
                                 if (compRandomNum == userRandomNum) {
 
-                                        alert("you win");
+                                        alert(userRandomNum +" you win");
                                         location.reload();
 
                                 }
 
                                 if (userRandomNum > compRandomNum) {
 
-                                        alert("you lose");
+                                        alert(userRandomNum +" you lose");
                                         location.reload();
 
                                 }
@@ -120,22 +123,22 @@
                                         crystalThreeRandomNum = Math.floor(Math.random() * 12);
                                 }
                                 userRandomNum = userRandomNum + crystalThreeRandomNum;
-                                $("#display3").append("<div>" + "Crystal#Three " + crystalThreeRandomNum+ "</div>");
+                                $("#display3").html("<div>" + "Crystal#Three " + crystalThreeRandomNum+ "</div>");
 
-                                $("#userrand").append("<div>" + "user random number " + userRandomNum+ "</div>");
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
 
                         
 
                                 if (compRandomNum == userRandomNum) {
 
-                                        alert("you win");
+                                        alert(userRandomNum +" you win");
                                         location.reload();
 
                                 }
 
                                 if (userRandomNum > compRandomNum) {
 
-                                        alert("you lose");
+                                        alert(userRandomNum +" you lose");
                                         location.reload();
 
                                 }
@@ -146,21 +149,21 @@
                                         crystalFourRandomNum = Math.floor(Math.random() * 12);
                                 }
                                 userRandomNum = userRandomNum + crystalFourRandomNum;
-                                $("#display4").append("<div>" + "Crystal#Four " + crystalFourRandomNum+ "</div>");
-                                $("#userrand").append("<div>" + "user random number " + userRandomNum+ "</div>");
+                                $("#display4").html("<div>" + "Crystal#Four " + crystalFourRandomNum+ "</div>");
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
 
 
 
                                 if (compRandomNum == userRandomNum) {
 
-                                        alert("you win");
+                                        alert(userRandomNum + " you win");
                                         location.reload();
 
                                 }
 
                                 if (userRandomNum > compRandomNum) {
 
-                                        alert("you lose");
+                                        alert(userRandomNum +" you lose");
                                         location.reload();
 
                                 }
