@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HW3 Random Number</title>
+
+
+        <style>
+                img {
+
+                        width: 100px;
+                }
+                .center
+                {
+
+                text-align: center;
+
+                }
+        </style>
+</head>
+
+<body>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <div class="center">
+        <h1 id="display"></h1>
+        <img id="crystal1" src="a.png"></img>
+        <img id="crystal2" src="b.png"></img>
+        <img id="crystal3" src="c.png"></img>
+        <img id="crystal4" src="d.png"></img>
+        <h1 id="display1"></h1>
+        <h1 id="display2"></h1>
+        <h1 id="display3"></h1>
+        <h1 id="display4"></h1>
+
+        <h1 id="userrand"></h1>
+
+
+</div>
+
+
+        <script>
+
+                var userRandomNum = 0;
+
+                var crystalOneRandomNum = 0;
+                var crystalTwoRandomNum = 0;
+                var crystalThreeRandomNum = 0;
+                var crystalFourRandomNum = 0;
+
+                var compRandomNum = Math.floor(Math.random() * 129);
+
+                $(document).ready(function () {
+                        $("#display").append(compRandomNum);
+
+
+
+
+                        $("#crystal1").on("click", function () {
+
+                                if (crystalOneRandomNum == 0) {
+                                        crystalOneRandomNum = Math.floor(Math.random() * 12);
+                                }
+
+                                userRandomNum = userRandomNum + crystalOneRandomNum;
+
+                                
+
+
+
+                        
+                                $("#display1").html("<div>" + "Crystal#One " + crystalOneRandomNum+ "</div>");
+
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
+
+
+
+                                if (compRandomNum == userRandomNum) {
+
+                                        alert(userRandomNum +" you win");
+                                        location.reload();
+
+                                }
+
+                                if (userRandomNum > compRandomNum) {
+
+                                        alert(userRandomNum +" you lose");
+                                        location.reload();
+
+                                }
+
+                        });
+                        $("#crystal2").on("click", function () {
+
+                                if (crystalTwoRandomNum == 0) {
+                                        crystalTwoRandomNum = Math.floor(Math.random() * 12);
+                                }
+                                userRandomNum = userRandomNum + crystalTwoRandomNum;
+                                $("#display2").html("<div>" + "Crystal#Two " + crystalTwoRandomNum+ "</div>");
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
+
+
+
+        
+
+
+                                if (compRandomNum == userRandomNum) {
+
+                                        alert(userRandomNum +" you win");
+                                        location.reload();
+
+                                }
+
+                                if (userRandomNum > compRandomNum) {
+
+                                        alert(userRandomNum +" you lose");
+                                        location.reload();
+
+                                }
+                        });
+
+                        $("#crystal3").on("click", function () {
+
+
+                                if (crystalThreeRandomNum == 0) {
+                                        crystalThreeRandomNum = Math.floor(Math.random() * 12);
+                                }
+                                userRandomNum = userRandomNum + crystalThreeRandomNum;
+                                $("#display3").html("<div>" + "Crystal#Three " + crystalThreeRandomNum+ "</div>");
+
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
+
+                        
+
+                                if (compRandomNum == userRandomNum) {
+
+                                        alert(userRandomNum +" you win");
+                                        location.reload();
+
+                                }
+
+                                if (userRandomNum > compRandomNum) {
+
+                                        alert(userRandomNum +" you lose");
+                                        location.reload();
+
+                                }
+                        });
+                        $("#crystal4").on("click", function () {
+
+                                if (crystalFourRandomNum == 0) {
+                                        crystalFourRandomNum = Math.floor(Math.random() * 12);
+                                }
+                                userRandomNum = userRandomNum + crystalFourRandomNum;
+                                $("#display4").html("<div>" + "Crystal#Four " + crystalFourRandomNum+ "</div>");
+                                $("#userrand").html("<div>" + "your number " + userRandomNum+ "</div>");
+
+
+
+                                if (compRandomNum == userRandomNum) {
+
+                                        alert(userRandomNum + " you win");
+                                        location.reload();
+
+                                }
+
+                                if (userRandomNum > compRandomNum) {
+
+                                        alert(userRandomNum +" you lose");
+                                        location.reload();
+
+                                }
+                        });
+                });
+        </script>
+
+
+
+</body>
+
+</html>
